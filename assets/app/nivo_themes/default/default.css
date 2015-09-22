@@ -1,0 +1,281 @@
+/*
+ * Nivo Lightbox Default Theme v1.0
+ * http://dev7studios.com/nivo-lightbox
+ *
+ * Copyright 2013, Dev7studios
+ * Free to use and abuse under the MIT license.
+ * http://www.opensource.org/licenses/mit-license.php
+ */
+ .wrap_logo {
+	width: 100%;
+	min-height: 1000px;
+	background: rgba(0,0,0,.7);
+	position: absolute;
+	z-index: 100;
+	top: 0;
+}
+.logo_decore {
+	width: 400px;
+	height: 250px;
+	margin: 150px auto;
+	padding-top: 150px;
+}
+.text_decore, .text_game, .text_studio {
+	position: relative;
+	width: 150px;
+	text-align: center;
+	color: white;
+	font-size: 30px;
+	text-transform: uppercase;
+	margin: 0 auto 15px auto;
+	opacity: 0;
+	text-shadow: 0 0 0 white;
+}
+.left_line, .right_line, .bottom_left_line, .bottom_right_line{
+	position: absolute;
+	top: 0;
+	width: 0;
+	height: 30px;
+	background-color: white;
+	box-shadow: 0 0 0 white;
+	opacity: .5;
+}
+.left_line {
+	left: 0;
+	transform-origin: left center;
+	transform: rotate(180deg) skew(15deg, 25deg);
+}
+.right_line {
+	right: 0;
+	transform-origin: right center;
+	transform: rotate(180deg) skew(-15deg, -25deg);
+}
+.bottom_left_line {
+	left: 7px;
+	top: 32px;
+	transform-origin: left center;
+	transform: rotate(10deg) skew(15deg, 25deg);
+}
+.bottom_right_line {
+	right: 7px;
+	top: 32px;
+	transform-origin: right center;
+	transform: rotate(-10deg) skew(-15deg, -25deg);
+}
+.text_decore .left_line {
+	animation: lineAnimation1 2s 1 ease;
+	animation-fill-mode: forwards;
+}
+.text_decore .right_line {
+	animation: lineAnimation1 2s 1 ease;
+	animation-fill-mode: forwards;
+}
+.text_game .left_line {
+	animation: lineAnimation2 2s 1 ease;
+	animation-delay: 2s;
+	animation-fill-mode: forwards;
+}
+.text_game .right_line {
+	animation: lineAnimation2 2s 1 ease;
+	animation-delay: 2s;
+	animation-fill-mode: forwards;
+}
+.text_studio .left_line {
+	animation: lineAnimation3 2s 1 ease;
+	animation-delay: 4s;
+	animation-fill-mode: forwards;
+}
+.text_studio .right_line {
+	animation: lineAnimation3 2s 1 ease;
+	animation-delay: 4s;
+	animation-fill-mode: forwards;
+}
+.text_studio .bottom_left_line {
+	animation: lineAnimation4 2s 1 ease;
+	animation-delay: 4s;
+	animation-fill-mode: forwards;
+}
+.text_studio .bottom_right_line {
+	animation: lineAnimation4 2s 1 ease;
+	animation-delay: 4s;
+	animation-fill-mode: forwards;
+}
+
+.text_decore {
+	animation: textAnimation 2s 1 ease;
+	animation-fill-mode: forwards;
+}
+.text_game {
+	animation: textAnimation 2s 1 ease;
+	animation-fill-mode: forwards;
+	animation-delay: 2s;
+}
+.text_studio {
+	animation: textAnimation 2s 1 ease;
+	animation-fill-mode: forwards;
+	animation-delay: 4s;
+}
+.logo_decore {
+	animation: alllogoAnimation .5s 1 ease;
+	animation-fill-mode: forwards;
+	animation-delay: 7s;
+}
+
+@keyframes textAnimation {
+	from {
+		opacity: 0;
+		text-shadow: 0 0 0 white;
+	}
+	to {
+		opacity: 1;
+		text-shadow: 0 0 10px white;
+	}
+}
+@keyframes lineAnimation1 {
+	from {
+		width: 0;
+		opacity: .5;
+		box-shadow: 0 0 0 white;
+	}
+	to {
+		width: 100px;
+		opacity: 1;
+		box-shadow: 0 0 20px  white;
+	}
+}
+@keyframes lineAnimation2 {
+	from {
+		width: 0;
+		opacity: .5;
+		box-shadow: 0 0 0 white;
+	}
+	to {
+		width: 66px;
+		opacity: 1;
+		box-shadow: 0 0 20px  white;
+	}
+}
+@keyframes lineAnimation3 {
+	from {
+		width: 0;
+		opacity: .5;
+		box-shadow: 0 0 0 white;
+	}
+	to {
+		width: 33px;
+		opacity: 1;
+		box-shadow: 0 0 20px  white;
+	}
+}
+@keyframes lineAnimation4 {
+	from {
+		width: 0;
+		opacity: .5;
+		box-shadow: 0 0 0 white;
+	}
+	to {
+		width: 70px;
+		opacity: 1;
+		box-shadow: 0 0 20px  white;
+	}
+}
+@keyframes alllogoAnimation {
+	from {
+		transform: scaleX(1);
+	}
+	to {
+		transform: scaleX(0);
+	}
+}
+
+.nivo-lightbox-theme-default.nivo-lightbox-overlay { 
+	background: #666;
+	background: rgba(0,0,0,0.6); 
+}
+.nivo-lightbox-theme-default .nivo-lightbox-content.nivo-lightbox-loading { background: url(loading.gif) no-repeat 50% 50%; }
+
+.nivo-lightbox-theme-default .nivo-lightbox-nav {
+	top: 10%;
+	width: 8%;
+	height: 80%;
+	text-indent: -9999px;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	opacity: 0.5;
+}
+.nivo-lightbox-theme-default .nivo-lightbox-nav:hover { 
+	opacity: 1; 
+	background-color: rgba(0,0,0,0.5);
+}
+.nivo-lightbox-theme-default .nivo-lightbox-prev { 
+	background-image: url(prev.png); 
+	border-radius: 0 3px 3px 0;
+}
+.nivo-lightbox-theme-default .nivo-lightbox-next { 
+	background-image: url(next.png); 
+	border-radius: 3px 0 0 3px;
+}
+
+.nivo-lightbox-theme-default .nivo-lightbox-close {
+	display: block;
+	background: url(close.png) no-repeat;
+	width: 48px;
+	height: 48px;
+	text-indent: -9999px;
+	padding: 5px;
+	opacity: 0.5;
+}
+.nivo-lightbox-theme-default .nivo-lightbox-close:hover { opacity: 1; }
+
+.nivo-lightbox-theme-default .nivo-lightbox-title-wrap { bottom: -7%; }
+.nivo-lightbox-theme-default .nivo-lightbox-title {
+	font: 14px/20px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-style: normal;
+	font-weight: normal;
+	background: #000;
+	color: #fff;
+	padding: 7px 15px;
+	border-radius: 30px;
+}
+
+.nivo-lightbox-theme-default .nivo-lightbox-image img {
+	background: #fff;
+	-webkit-box-shadow: 0px 1px 1px rgba(0,0,0,0.4);
+	        box-shadow: 0px 1px 1px rgba(0,0,0,0.4);
+}
+.nivo-lightbox-theme-default .nivo-lightbox-ajax,
+.nivo-lightbox-theme-default .nivo-lightbox-inline {
+	background: #fff;
+	padding: 40px;
+	-webkit-box-shadow: 0px 1px 1px rgba(0,0,0,0.4);
+	        box-shadow: 0px 1px 1px rgba(0,0,0,0.4);
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.3),
+       (-o-min-device-pixel-ratio: 2.6/2),
+       (min--moz-device-pixel-ratio: 1.3),
+       (min-device-pixel-ratio: 1.3),
+       (min-resolution: 1.3dppx) {
+
+	.nivo-lightbox-theme-default .nivo-lightbox-content.nivo-lightbox-loading { 
+		background-image: url(loading@2x.gif); 
+		-webkit-background-size: 32px 32px; 
+		        background-size: 32px 32px;
+	}
+	.nivo-lightbox-theme-default .nivo-lightbox-prev { 
+		background-image: url(prev@2x.png); 
+		-webkit-background-size: 48px 48px; 
+		        background-size: 48px 48px;
+	}
+	.nivo-lightbox-theme-default .nivo-lightbox-next { 
+		background-image: url(next@2x.png); 
+		-webkit-background-size: 48px 48px; 
+		        background-size: 48px 48px;
+	}
+	.nivo-lightbox-theme-default .nivo-lightbox-close { 
+		background-image: url(close@2x.png); 
+		-webkit-background-size: 16px 16px; 
+		        background-size: 16px 16px;
+	}
+	
+}
