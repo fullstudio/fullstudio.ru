@@ -1,0 +1,47 @@
+footer
+	.container
+			.contact-box.wow.rotateIn.animated(data-wow-offset='10', data-wow-duration='1.5s')
+					a.btn.contact-button.expand-form.expanded
+							i.icon_mail_alt
+					.row.expanded-contact-form
+							.col-md-8.col-md-offset-2
+									form#contact.contact-form(role='form')
+											h4.success
+													i.icon_check
+													|  Your message has been sent successfully.
+											h4.error
+													i.icon_error-circle_alt
+													|  E-mail must be valid and message must be longer than 1 character.
+											.col-md-6
+													input#name.form-control.input-box(type='text', name='name', placeholder='Your Name')
+											.col-md-6
+													input#email.form-control.input-box(type='email', name='email', placeholder='Your Email')
+											.col-md-12
+													input#subject.form-control.input-box(type='text', name='subject', placeholder='Subject')
+													textarea#message.form-control.textarea-box(rows='8', placeholder='Message')
+											button#submit.btn.btn-primary.standard-button2.ladda-button(type='submit', name='submit', data-style='expand-left') Send Message
+			img.responsive-img(src='http://templateocean.com/premium/template/kane/files/images/logo.png', alt='LOGO')
+			ul.social-icons
+					li
+							a(href='')
+									i.social_facebook_square
+					li
+							a(href='')
+									i.social_twitter_square
+					li
+							a(href='')
+									i.social_pinterest_square
+					li
+							a(href='')
+									i.social_googleplus_square
+					li
+							a(href='')
+									i.social_instagram_square
+					li
+							a(href='')
+									i.social_dribbble_square
+					li
+							a(href='')
+									i.social_flickr_square
+			p.copyright
+					| &copy;2014 Kane, All Rights Reserved
