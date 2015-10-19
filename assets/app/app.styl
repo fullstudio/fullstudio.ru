@@ -1,94 +1,239 @@
-@import '_vars'
 @import '_sticky-footer'
 
-// container
+html
+  font-size 100%
+
 body
-	font-family: 'HelveticaNeue-Light', sans-serif
-	font-size: 13px
-	color: #000
-	// background-color: #1D2A3B
+  background #232323
+  font-family 'Roboto', sans-serif
+  font-size 16px
+  font-weight 300
+  color #c8c8c8
+  line-height 28px
+  text-align center
+  overflow-x hidden !important
+  margin auto !important
 
-.layout__stikyWrap
-	display: flex
-	flex: 1 0 auto
-	flex-direction: column
+@-webkit-viewport
+  width device-width
 
-.map
-	width: 100%
-	height: 350px
-	margin-bottom: 30px
+@-moz-viewport
+  width device-width
 
-.pageHeader
-	height: 110px
-	background: url(/img/banner/slidenotwide.jpg)
-	margin-bottom: 20px
-	.pageTitle
-		color: #45413D
-		padding: 0 30px
-		height: 110px
-		line-height: 110px
-		background: rgba(255,255,255,.7)
-		display: inline-block
+@-ms-viewport
+  width device-width
 
-// type
-main
-	padding: 20px 0
-a:hover, a:focus, a:link
-	text-decoration: none
+@-o-viewport
+  width device-width
 
-.img-thumbnail
-	width: 100%
+@viewport
+  width device-width
 
-.vacancies
-	height: 110px
-	background-color: red
-// PhotoGallery
-.gallery
-	// display: block
-	list-style: none
-	// margin: 0
-	padding: 0
-	li
-		margin-bottom: 20px
-		display: inline-block
-		vertical-align: top
-		a
-			transition: border 0.4s
-			display: inline-block
-			width: 100%
-			height: 200px
-			&:hover
-				border: 1px solid #000
-			img
-				width: 200px
-				height: 200px
-			.pseudo_img
-				background-size: cover
-				background-repeat: no-repeat
-				width: 100%
-				height: 100%
-//Our production
-.production
-	// display: block
-	list-style: none
-	// margin: 0
-	padding: 0
-	li
-		vertical-align: top
-		margin-bottom: 20px
-		a
-			width: 100%
-			height: 230px
-			.figure-caption
-				transition: color 0.4s
-			&:hover
-				.figure-caption
-					color: #000
-			img
-				width: 100%
-				height: 230px
-			.pseudo_img
-				background-size: cover
-				background-repeat: no-repeat
-				width: 100%
-				height: 100%
+a
+  -webkit-transition all ease 0.25s
+  transition all ease 0.25s
+  &:hover
+    text-decoration none
+
+.btn:focus,
+.btn:active
+  outline inherit
+
+textarea:focus, input:focus
+  color #ffffff
+
+*,
+*:before,
+*:after
+  -webkit-box-sizing border-box
+  -moz-box-sizing border-box
+  box-sizing border-box
+
+ul,
+ol
+  padding-left 0 !important
+
+li
+  list-style none
+
+.preloader
+  position fixed
+  top 0
+  left 0
+  right 0
+  bottom 0
+  background-color #fefefe
+  z-index 99999
+  height 100%
+  width 100%
+  overflow hidden !important
+
+.status
+  width 40px
+  height 40px
+  position absolute
+  left 50%
+  top 50%
+  background-image url(http://templateocean.com/premium/template/kane/files/images/loading.gif)
+  background-repeat no-repeat
+  background-position center
+  -webkit-background-size cover
+  background-size cover
+  margin -20px 0 0 -20px
+
+@font-face
+  font-family 'Lane'
+  src url('../fonts/lanenar_Lane.eot')
+  src url('../fonts/lanenar_Lane.eot?#iefix') format('embedded-opentype'), url('../fonts/lanenar_Lane.woff') format('woff'), url('../fonts/lanenar_Lane.ttf') format('truetype'), url('../fonts/lanenar_Lane.svg#Lane') format('svg')
+  font-weight normal
+  font-style normal
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) 
+ 
+    @font-face 
+        font-family: 'Lane';
+        src: url('../fonts/lanenar_Lane.svg#Lane') format('svg');
+    
+
+
+h1,
+h2
+  font-family 'Lane', sans-serif
+  font-weight normal
+
+h1
+  font-size 3.75rem
+  line-height 4.688rem
+
+h2
+  font-size 3.125rem
+  line-height 4.063rem
+
+h3
+  font-size 24px
+  line-height 38px
+  font-weight 300
+
+h4
+  font-size 20px
+  line-height 30px
+  font-weight 300
+
+h5
+  font-size 18px
+  font-weight 300
+
+.standard-button,
+.standard-button2
+  font-size 18px
+  font-weight 400 !important
+  border-radius 4px !important
+  text-shadow 0 !important
+  color #ffffff
+  min-width 150px
+  border none
+  padding 16px 25px 16px 25px
+  margin 5px
+  -webkit-transition all ease 0.25s
+  transition all ease 0.25s
+
+.standard-button:hover,
+.standard-button2:hover
+  border none
+
+.standard-button i,
+.standard-button2 i
+  vertical-align inherit
+  margin-right 8px
+  font-size 20px
+
+.white-text
+  color #ffffff
+
+.dark-text
+  color #272727
+
+.deep-dark-bg
+  background #161616 !important
+
+.section-header
+  padding-bottom 78px
+  h2
+    margin-bottom 20px
+  .section-description
+    display inline-block
+    position relative
+    text-align center
+    padding-top 10px
+    padding-bottom 10px
+
+.colored-line
+  margin auto
+  z-index 1
+  width 165px
+  height 1px
+
+.white-line
+  margin auto
+  z-index 1
+  width 165px
+  height 1px
+  background #ffffff
+
+.colored-line-left
+  float left
+  z-index 1
+  display block
+  width 165px
+  height 1px
+
+video
+  height auto
+
+iframe,
+embed,
+object
+  max-width 100%
+
+.video-container
+  width 90%
+  background transparent !important
+  margin auto
+  margin-bottom 50px
+  margin-top 40px
+
+.video
+  background transparent !important
+  
+ .packages
+  padding-top 80px
+  padding-bottom 60px
+  background #222222
+
+.single-package
+  background #161616
+  overflow auto
+  border 0px solid #161616
+  border-radius 3px
+  margin-bottom 60px
+  .price
+    background #222222
+    h2
+      color #FFFFFF
+    .sign
+      vertical-align super
+      font-size 20px
+    .month
+      font-size 16px
+      font-family 'Roboto', sans-serif
+      font-weight 300
+  .color-bg
+    background-color !important
+  .package-feature
+    margin-top 25px
+    margin-bottom 25px
+    & > li
+      margin-top 15px
+      margin-bottom 15px
+      & > span
+        margin-right 7px
